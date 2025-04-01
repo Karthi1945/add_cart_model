@@ -38,7 +38,7 @@ const CardList = ({ item, removeItem, setAddedItem, itemsArr }) => {
           setTimeout(() => removeItem(item), 190);
         }}
       >
-        ✘
+        Remove from cart
       </button>
       <h4>{item.title}</h4>
       <hr />

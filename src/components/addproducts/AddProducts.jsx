@@ -65,7 +65,7 @@ const AddProducts = ({ items, click, removeItem, setAddedItem }) => {
               setTimeout(() => click(false), 200);
             }}
           >
-            ⌫
+           Go back
           </button>
         </div>
         <div className="right-side-body">
@@ -88,9 +88,7 @@ const AddProducts = ({ items, click, removeItem, setAddedItem }) => {
           <div className="check-out">
             <button
               className="check-out-btn"
-              onClick={() => {
-                items.length >= 1 && print();
-              }}
+              
             >
               Check Out
             </button>
