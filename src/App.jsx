@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./components/header/Header";
-
+import Search from "./components/search/Search";
 import AddProducts from "./components/addproducts/AddProducts";
 import CardBody from "./components/cards/CardBody";
 import Button from "./components/button/Button";
@@ -8,7 +8,7 @@ import Button from "./components/button/Button";
 import "./App.css";
 const App = () => {
   const [items, setItem] = useState([]);
-  
+  const [searchValue, setSearchValue] = useState("");
   const [addedItems, setAddedItem] = useState([]);
   const [showAddProducts, setShowAddProducts] = useState(false);
 
@@ -44,11 +44,7 @@ const App = () => {
         <div className="nav">
           <Header />
           <div className="nav-right">
-            <Search
-              products={items}
-              value={searchValue}
-              onChangeData={changingSrarchData}
-            />
+          
             <Button num={addedItems.length} click={setShowAddProducts} />
           </div>
         </div>
