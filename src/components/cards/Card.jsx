@@ -9,6 +9,11 @@ const Card = ({ product, addItem, removeItem, addedItems }) => {
     item.length == 0 ? setIsAdded(true) : setIsAdded(false);
   }, [item]);
 
+  function showalert()
+  {
+    alert("Item Already Added")
+  }
+
   // console.log(item);
   return (
     <div className="card">
@@ -23,11 +28,11 @@ const Card = ({ product, addItem, removeItem, addedItems }) => {
         <button
           className={isAdded ? "add-item-btn" : "remove-item-btn"}
           onClick={() => {
-            isAdded ? addItem(product) : removeItem(product);
+            isAdded ? addItem(product) : showalert();
             setIsAdded(!isAdded);
           }}
         >
-          {isAdded ? "ADD " : "CANCLE"}
+          {isAdded ? "Add To cart" : "Item already added"}
         </button>
       </div>
     </div>

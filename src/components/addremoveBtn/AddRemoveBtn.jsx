@@ -14,7 +14,7 @@ export function AddRemoveBtn({
         setIsAdded(!isAdded);
       }}
     >
-      {isAdded ? "ADD " : "CANCLE"}
+      {isAdded ? "Add to cart " : "item already added"}
     </button>
   );
 }
